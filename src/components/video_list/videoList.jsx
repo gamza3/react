@@ -22,12 +22,8 @@ const VideoList = (props) => {
                         return (
                             <VideoItem 
                                 video={item}
-                                id={item.id}
                                 key={item.id} 
-                                title={item.snippet.title}
-                                thumb={item.snippet.thumbnails.default}
-                                channelTitle={item.snippet.channelTitle}
-                                onPlay={onPlay}
+                                onVideoClick={props.onVideoClick}
                             />
                         );
                        
