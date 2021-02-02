@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import VideoItem from '../video_item/videoItem';
 // import Player from './player';
 // import css from '../css/video.module.css';
+import css from './video_list.module.css';
 
 const VideoList = (props) => {
 
@@ -15,7 +16,7 @@ const VideoList = (props) => {
     return (
         <>
             {/* <Player videoId={videoId}/> */}
-            <ul>
+            <ul className={css.videos}>
                 {
                     props.videos.length > 0 ? props.videos.map(item=>{
                         const id = typeof item.id == 'string' ? item.id : item.id.videoId;
