@@ -19,21 +19,18 @@ const VideoList = (props) => {
             <ul className={css.videos}>
                 {
                     props.videos.length > 0 ? props.videos.map(item=>{
-                        const id = typeof item.id == 'string' ? item.id : item.id.videoId;
-
-                        if (id) {
-                            return (
-                                <VideoItem 
-                                    video={item}
-                                    id={id}
-                                    key={id} 
-                                    title={item.snippet.title}
-                                    thumb={item.snippet.thumbnails.default}
-                                    channelTitle={item.snippet.channelTitle}
-                                    onPlay={onPlay}
-                                />
-                            );
-                        }
+                        return (
+                            <VideoItem 
+                                video={item}
+                                id={item.id}
+                                key={item.id} 
+                                title={item.snippet.title}
+                                thumb={item.snippet.thumbnails.default}
+                                channelTitle={item.snippet.channelTitle}
+                                onPlay={onPlay}
+                            />
+                        );
+                       
                     }) : ''
                 }
             </ul>
