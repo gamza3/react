@@ -1,0 +1,24 @@
+.btn-search{
+    font-size: 2rem;
+    color: white;
+    background: red;
+    border: 0;
+}
+
+.keyword {
+    width: 100%;
+}
+
+.search-tit {
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    /* padding: 0 2rem; */
+    justify-content: space-between;
+}
